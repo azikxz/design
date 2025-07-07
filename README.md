@@ -1,5 +1,4 @@
-# **PREVIEW OF IMAGES**
-
+# __PREVIEW OF IMAGES__
 stylix.base16Scheme = inputs.base16.paths.x86_64-linux.themeName;
 
 ## angelStatue
@@ -705,3 +704,4 @@ stylix.base16Scheme = inputs.base16.paths.x86_64-linux.themeName;
 ## yamato
 
 ![yamato](./yamato.jpg)
+
