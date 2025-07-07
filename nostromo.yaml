@@ -1,0 +1,21 @@
+system: "base16"
+name: "Nostromo"
+author: "Chawye Hsu (https://github.com/chawyehsu)"
+variant: "dark"
+
+base00: "141D21" # Default Background
+base01: "283137" # Bright Background
+base02: "21322C" #
+base03: "3A4C4E" # Comments
+base04: "58A2A4" # Dark Foreground
+base05: "A5FBFF" # Default Foreground
+base06: "8FD8DB" # Light Foreground
+base07: "E1FFE5" # Light Background
+base08: "DD513C" # Diff Deleted
+base09: "E2762E" #
+base0A: "FFFF84" #
+base0B: "58F0B5" # Diff Inserted
+base0C: "4FCBCB" #
+base0D: "34A2DF" #
+base0E: "937CB8" #
+base0F: "840084" #
