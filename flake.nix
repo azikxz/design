@@ -14,13 +14,17 @@
       wallpaperDir = ./.;
       exts = [ ".jpg" ];
 
+      # Удалим апострофы из имён
+      sanitizeName = name: lib.replaceStrings [ "'" ] [ "" ] name;
+
       wallpaperPaths = lib.mapAttrs (name: drv: "${drv}/${name}.jpg") (
         lib.listToAttrs (
           map
             (
               file:
               let
-                name = lib.removeSuffix (lib.findFirst (ext: lib.hasSuffix ext file) ".jpg" exts) file;
+                nameRaw = lib.removeSuffix (lib.findFirst (ext: lib.hasSuffix ext file) ".jpg" exts) file;
+                name = sanitizeName nameRaw;
                 path = wallpaperDir + "/${file}";
               in
               {

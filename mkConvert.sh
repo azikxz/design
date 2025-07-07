@@ -16,3 +16,11 @@ done
 
 # Optimize all JPG files with 85% quality
 jpegoptim -q -m85 --strip-all -- *.jpg
+
+# Rename optimized JPGs to include a ' before extension
+for img in *.jpg; do
+  [[ -e "$img" ]] || continue
+  base="${img%.jpg}"
+  [[ "$base" == *"'" ]] && continue
+  mv -- "$img" "${base}'".jpg
+done

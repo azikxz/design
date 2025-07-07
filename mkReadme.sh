@@ -25,13 +25,14 @@ echo "" >> "$file"
 for img in *.{png,jpg,jpeg,gif,webp}; do
   [[ -e "$img" ]] || continue
 
-  # Remove path and extension: compressed/car.jpg → car
-  filename="$(basename "${img%.*}")"
+  # Remove path and extension and trailing apostrophe: name'.jpg → name
+  base_name="$(basename "${img%.*}")"
+  clean_name="${base_name%"'"}"
 
   # Add title and preview to README
-  echo "## $filename" >> "$file"
+  echo "## $clean_name" >> "$file"
   echo "" >> "$file"
-  echo "![${filename}](./${img})" >> "$file"
+  echo "![${clean_name}](./${img})" >> "$file"
   echo "" >> "$file"
 done
 
