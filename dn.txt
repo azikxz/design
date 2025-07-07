@@ -1,0 +1,4 @@
+https://w.wallhaven.cc/full/we/wallhaven-wepgzr.png ./gtaSAVert
+https://w.wallhaven.cc/full/rr/wallhaven-rr1v7q.jpg ./owlHouse
+https://w.wallhaven.cc/full/85/wallhaven-85gz2j.png ./minecraftHouse
+https://w.wallhaven.cc/full/we/wallhaven-we5696.png ./minecraftCity

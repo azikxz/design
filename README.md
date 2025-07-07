@@ -1,74 +1,707 @@
-<div align="center">
-	<h1>【 DESIGN 】</h1>
-</div>
+# **PREVIEW OF IMAGES**
 
-# base16 themes selfmade/stolen etc.
+stylix.base16Scheme = inputs.base16.paths.x86_64-linux.themeName;
 
-- [stylix](https://github.com/danth/stylix)
-- [base16.nix](https://github.com/SenchoPens/base16.nix)
-- [flavours](https://github.com/Misterio77/flavours)
-- [previewer](https://sesh.github.io/base16-viewer/) use without comments as (# something)
+## angelStatue
 
-## Cheatsheet
+![angelStatue](./angelStatue.jpg)
 
-```yaml
-system: "base16"
-name: "themeName"
-author: "yourName"
-variant: "dark" # dark/light
+## auroraBorealis
 
-base00: "16292c" # Default Background (background)
-base01: "3d4a50" # Lighter Background (status bars, line number)
-base02: "646b73" # Selection Background
-base03: "8c8d96" # Comments, Invisibles, Line Highlighting
-base04: "b3aeb9" # Dark Foreground (status bars)
-base05: "dacfdd" # Default Foreground, Caret, Delimiters, Operators
-base06: "dfd6e2" # Light Foreground (Not often used)
-base07: "e5dde7" # Light Background (Not often used)
-base08: "a6609d" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-base09: "75797a" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-base0A: "627d84" # Classes, Markup Bold, Search Text Background
-base0B: "9e8056" # Strings, Inherited Class, Markup Code, Diff Inserted
-base0C: "537f89" # Support, Regular Expressions, Escape Characters, Markup Quotes
-base0D: "4e817e" # Functions, Methods, Attribute IDs, Headings
-base0E: "578b8e" # Keywords, Storage, Selector, Markup Italic, Diff Changed
-base0F: "827e9c" # Deprecated, Opening/Closing Embedded Language Tags
-```
+![auroraBorealis](./auroraBorealis.jpg)
 
-## nixOS
+## birdsInSea
 
-```nix
-{
- inputs = {
-  ...
-  stylix.url = "github:danth/stylix"; # stylix
-  design = {
-   url = "sourcehut:~neverness/design";
-   # optional
-   inputs = {
-    nixpkgs.follows = "nixpkgs";
-    flake-utils.follows = "flake-utils";
-   };
-  }; # designing repo
-  ...
- };
+![birdsInSea](./birdsInSea.jpg)
 
- outputs = inputs: {
-  ...
-  nixosConfigurations.nixos = lib.nixosSystem {
-  specialArgs = { inherit inputs; };
-  modules =
-   let
-    themeName = "horizon-dark";
-   in
-   [
-    {
-     stylix.base16Scheme = # ~./base16/*.yaml
-      inputs.design.paths.x86_64-linux."${themeName}";
-    }
-   ];
-  };
-  ...
- };
-}
-```
+## boltsOnRoad
+
+![boltsOnRoad](./boltsOnRoad.jpg)
+
+## bookOnTable
+
+![bookOnTable](./bookOnTable.jpg)
+
+## boyInForest
+
+![boyInForest](./boyInForest.jpg)
+
+## cameraGirl
+
+![cameraGirl](./cameraGirl.jpg)
+
+## carAtHorizon
+
+![carAtHorizon](./carAtHorizon.jpg)
+
+## carGirls
+
+![carGirls](./carGirls.jpg)
+
+## carInTree
+
+![carInTree](./carInTree.jpg)
+
+## carSquare
+
+![carSquare](./carSquare.jpg)
+
+## carWheel
+
+![carWheel](./carWheel.jpg)
+
+## cascadeMedusa
+
+![cascadeMedusa](./cascadeMedusa.jpg)
+
+## casseteInHand
+
+![casseteInHand](./casseteInHand.jpg)
+
+## catGlow
+
+![catGlow](./catGlow.jpg)
+
+## catyMisk
+
+![catyMisk](./catyMisk.jpg)
+
+## catyPink
+
+![catyPink](./catyPink.jpg)
+
+## chaHaeIn
+
+![chaHaeIn](./chaHaeIn.jpg)
+
+## cityBaW
+
+![cityBaW](./cityBaW.jpg)
+
+## cityTop
+
+![cityTop](./cityTop.jpg)
+
+## cityUwu
+
+![cityUwu](./cityUwu.jpg)
+
+## cloudsCrop
+
+![cloudsCrop](./cloudsCrop.jpg)
+
+## cosmoText
+
+![cosmoText](./cosmoText.jpg)
+
+## cyberToCity
+
+![cyberToCity](./cyberToCity.jpg)
+
+## cyberTopo
+
+![cyberTopo](./cyberTopo.jpg)
+
+## cyberTorii
+
+![cyberTorii](./cyberTorii.jpg)
+
+## dandadan
+
+![dandadan](./dandadan.jpg)
+
+## deathStranding
+
+![deathStranding](./deathStranding.jpg)
+
+## docksCity
+
+![docksCity](./docksCity.jpg)
+
+## ducks
+
+![ducks](./ducks.jpg)
+
+## eblaniBLYAT
+
+![eblaniBLYAT](./eblaniBLYAT.jpg)
+
+## evaAdam
+
+![evaAdam](./evaAdam.jpg)
+
+## evaAndRei
+
+![evaAndRei](./evaAndRei.jpg)
+
+## evaAsuka
+
+![evaAsuka](./evaAsuka.jpg)
+
+## evaGirls
+
+![evaGirls](./evaGirls.jpg)
+
+## evaMisato
+
+![evaMisato](./evaMisato.jpg)
+
+## evaPlanet
+
+![evaPlanet](./evaPlanet.jpg)
+
+## evaReiB
+
+![evaReiB](./evaReiB.jpg)
+
+## evaRei
+
+![evaRei](./evaRei.jpg)
+
+## evaTower
+
+![evaTower](./evaTower.jpg)
+
+## evaTowerLow
+
+![evaTowerLow](./evaTowerLow.jpg)
+
+## evaTrio
+
+![evaTrio](./evaTrio.jpg)
+
+## exoPlane
+
+![exoPlane](./exoPlane.jpg)
+
+## fangpeii
+
+![fangpeii](./fangpeii.jpg)
+
+## fantasy
+
+![fantasy](./fantasy.jpg)
+
+## flowerOrange
+
+![flowerOrange](./flowerOrange.jpg)
+
+## forestPixel
+
+![forestPixel](./forestPixel.jpg)
+
+## forestSamu
+
+![forestSamu](./forestSamu.jpg)
+
+## forestTsushima
+
+![forestTsushima](./forestTsushima.jpg)
+
+## friezaCast
+
+![friezaCast](./friezaCast.jpg)
+
+## friren
+
+![friren](./friren.jpg)
+
+## gaia
+
+![gaia](./gaia.jpg)
+
+## gasStation
+
+![gasStation](./gasStation.jpg)
+
+## gavrikCamp
+
+![gavrikCamp](./gavrikCamp.jpg)
+
+## gavrik
+
+![gavrik](./gavrik.jpg)
+
+## germanHouses
+
+![germanHouses](./germanHouses.jpg)
+
+## girlAngel
+
+![girlAngel](./girlAngel.jpg)
+
+## girlAtSea
+
+![girlAtSea](./girlAtSea.jpg)
+
+## girlCoding2
+
+![girlCoding2](./girlCoding2.jpg)
+
+## girlCoding
+
+![girlCoding](./girlCoding.jpg)
+
+## girlCoffee
+
+![girlCoffee](./girlCoffee.jpg)
+
+## girlFood
+
+![girlFood](./girlFood.jpg)
+
+## girlInOdezda
+
+![girlInOdezda](./girlInOdezda.jpg)
+
+## girlInSea
+
+![girlInSea](./girlInSea.jpg)
+
+## girlMirror
+
+![girlMirror](./girlMirror.jpg)
+
+## girlOnKanat
+
+![girlOnKanat](./girlOnKanat.jpg)
+
+## girlPixel
+
+![girlPixel](./girlPixel.jpg)
+
+## girlWithAxe
+
+![girlWithAxe](./girlWithAxe.jpg)
+
+## girlWithBycicle
+
+![girlWithBycicle](./girlWithBycicle.jpg)
+
+## girlWithFlowers
+
+![girlWithFlowers](./girlWithFlowers.jpg)
+
+## glowSea
+
+![glowSea](./glowSea.jpg)
+
+## goldenGates
+
+![goldenGates](./goldenGates.jpg)
+
+## gtaSAVert
+
+![gtaSAVert](./gtaSAVert.jpg)
+
+## gtaVIStrip
+
+![gtaVIStrip](./gtaVIStrip.jpg)
+
+## hanabiFireworks
+
+![hanabiFireworks](./hanabiFireworks.jpg)
+
+## hatsuneMiku
+
+![hatsuneMiku](./hatsuneMiku.jpg)
+
+## huTao
+
+![huTao](./huTao.jpg)
+
+## inanis
+
+![inanis](./inanis.jpg)
+
+## insaneGirl
+
+![insaneGirl](./insaneGirl.jpg)
+
+## japanLogo
+
+![japanLogo](./japanLogo.jpg)
+
+## kimiNoNawa
+
+![kimiNoNawa](./kimiNoNawa.jpg)
+
+## kitchen
+
+![kitchen](./kitchen.jpg)
+
+## kobaAtCar
+
+![kobaAtCar](./kobaAtCar.jpg)
+
+## kobaCarWithout
+
+![kobaCarWithout](./kobaCarWithout.jpg)
+
+## lagaTrain
+
+![lagaTrain](./lagaTrain.jpg)
+
+## lampaBaW
+
+![lampaBaW](./lampaBaW.jpg)
+
+## lampaMany
+
+![lampaMany](./lampaMany.jpg)
+
+## lampaOnStreet
+
+![lampaOnStreet](./lampaOnStreet.jpg)
+
+## lampaRow
+
+![lampaRow](./lampaRow.jpg)
+
+## lampaThree
+
+![lampaThree](./lampaThree.jpg)
+
+## lighthouseAtSea
+
+![lighthouseAtSea](./lighthouseAtSea.jpg)
+
+## lighthouseAtSky
+
+![lighthouseAtSky](./lighthouseAtSky.jpg)
+
+## lightsBaW
+
+![lightsBaW](./lightsBaW.jpg)
+
+## literal
+
+![literal](./literal.jpg)
+
+## lofiArt
+
+![lofiArt](./lofiArt.jpg)
+
+## lolFandom
+
+![lolFandom](./lolFandom.jpg)
+
+## luffi
+
+![luffi](./luffi.jpg)
+
+## luffy
+
+![luffy](./luffy.jpg)
+
+## manahamu
+
+![manahamu](./manahamu.jpg)
+
+## mapOfWorld
+
+![mapOfWorld](./mapOfWorld.jpg)
+
+## masako
+
+![masako](./masako.jpg)
+
+## masakoSea
+
+![masakoSea](./masakoSea.jpg)
+
+## masakoWithBoy
+
+![masakoWithBoy](./masakoWithBoy.jpg)
+
+## maskIDK
+
+![maskIDK](./maskIDK.jpg)
+
+## matoruGojo
+
+![matoruGojo](./matoruGojo.jpg)
+
+## melon
+
+![melon](./melon.jpg)
+
+## mikuWithBook
+
+![mikuWithBook](./mikuWithBook.jpg)
+
+## minecraftCity
+
+![minecraftCity](./minecraftCity.jpg)
+
+## minecraftHouse
+
+![minecraftHouse](./minecraftHouse.jpg)
+
+## minecraftInHouse
+
+![minecraftInHouse](./minecraftInHouse.jpg)
+
+## minecraftOgorod
+
+![minecraftOgorod](./minecraftOgorod.jpg)
+
+## minecraftStreet
+
+![minecraftStreet](./minecraftStreet.jpg)
+
+## mohitoRainbow
+
+![mohitoRainbow](./mohitoRainbow.jpg)
+
+## monotogari
+
+![monotogari](./monotogari.jpg)
+
+## moonApocalypse
+
+![moonApocalypse](./moonApocalypse.jpg)
+
+## moonWithSputnik
+
+![moonWithSputnik](./moonWithSputnik.jpg)
+
+## neoCity
+
+![neoCity](./neoCity.jpg)
+
+## nichiJow
+
+![nichiJow](./nichiJow.jpg)
+
+## nightCity
+
+![nightCity](./nightCity.jpg)
+
+## nijisani
+
+![nijisani](./nijisani.jpg)
+
+## nijisaniWings
+
+![nijisaniWings](./nijisaniWings.jpg)
+
+## nixFlake
+
+![nixFlake](./nixFlake.jpg)
+
+## nothing
+
+![nothing](./nothing.jpg)
+
+## nothingRed
+
+![nothingRed](./nothingRed.jpg)
+
+## okinaEmblem
+
+![okinaEmblem](./okinaEmblem.jpg)
+
+## okinaLadder
+
+![okinaLadder](./okinaLadder.jpg)
+
+## okinaTrain
+
+![okinaTrain](./okinaTrain.jpg)
+
+## oldKeyboard
+
+![oldKeyboard](./oldKeyboard.jpg)
+
+## owlHouse
+
+![owlHouse](./owlHouse.jpg)
+
+## painting
+
+![painting](./painting.jpg)
+
+## plantFlower
+
+![plantFlower](./plantFlower.jpg)
+
+## poolGirl
+
+![poolGirl](./poolGirl.jpg)
+
+## primeAndBee
+
+![primeAndBee](./primeAndBee.jpg)
+
+## railwayTrain
+
+![railwayTrain](./railwayTrain.jpg)
+
+## ramielBlood
+
+![ramielBlood](./ramielBlood.jpg)
+
+## resonanceHeese
+
+![resonanceHeese](./resonanceHeese.jpg)
+
+## resonanceSphere
+
+![resonanceSphere](./resonanceSphere.jpg)
+
+## roadAtRiver
+
+![roadAtRiver](./roadAtRiver.jpg)
+
+## robotAtGreen
+
+![robotAtGreen](./robotAtGreen.jpg)
+
+## robotBooker
+
+![robotBooker](./robotBooker.jpg)
+
+## rockGirl
+
+![rockGirl](./rockGirl.jpg)
+
+## rockGirlZoom
+
+![rockGirlZoom](./rockGirlZoom.jpg)
+
+## schoolGirl
+
+![schoolGirl](./schoolGirl.jpg)
+
+## seaBeach
+
+![seaBeach](./seaBeach.jpg)
+
+## shadowBike
+
+![shadowBike](./shadowBike.jpg)
+
+## shadowBikeYet
+
+![shadowBikeYet](./shadowBikeYet.jpg)
+
+## shadow
+
+![shadow](./shadow.jpg)
+
+## shadowRuff
+
+![shadowRuff](./shadowRuff.jpg)
+
+## shiyun
+
+![shiyun](./shiyun.jpg)
+
+## shizoCGI
+
+![shizoCGI](./shizoCGI.jpg)
+
+## shizo
+
+![shizo](./shizo.jpg)
+
+## sinziFalling
+
+![sinziFalling](./sinziFalling.jpg)
+
+## skyrimSky
+
+![skyrimSky](./skyrimSky.jpg)
+
+## SNOOPDOGGG
+
+![SNOOPDOGGG](./SNOOPDOGGG.jpg)
+
+## starsFisherman
+
+![starsFisherman](./starsFisherman.jpg)
+
+## statueAndSkull
+
+![statueAndSkull](./statueAndSkull.jpg)
+
+## summerBeach
+
+![summerBeach](./summerBeach.jpg)
+
+## summerShop
+
+![summerShop](./summerShop.jpg)
+
+## sunFlower2
+
+![sunFlower2](./sunFlower2.jpg)
+
+## sunFlower
+
+![sunFlower](./sunFlower.jpg)
+
+## sunsetRoad
+
+![sunsetRoad](./sunsetRoad.jpg)
+
+## tapestry
+
+![tapestry](./tapestry.jpg)
+
+## theOuterWilds
+
+![theOuterWilds](./theOuterWilds.jpg)
+
+## tokyoLogoBaW
+
+![tokyoLogoBaW](./tokyoLogoBaW.jpg)
+
+## tokyoLogo
+
+![tokyoLogo](./tokyoLogo.jpg)
+
+## townChristmas
+
+![townChristmas](./townChristmas.jpg)
+
+## train
+
+![train](./train.jpg)
+
+## ultraMono
+
+![ultraMono](./ultraMono.jpg)
+
+## umbrellasRain
+
+![umbrellasRain](./umbrellasRain.jpg)
+
+## urNameArt
+
+![urNameArt](./urNameArt.jpg)
+
+## vanRoad
+
+![vanRoad](./vanRoad.jpg)
+
+## wavesNeon
+
+![wavesNeon](./wavesNeon.jpg)
+
+## weekndStreet
+
+![weekndStreet](./weekndStreet.jpg)
+
+## who
+
+![who](./who.jpg)
+
+## witchCar
+
+![witchCar](./witchCar.jpg)
+
+## yamato
+
+![yamato](./yamato.jpg)
