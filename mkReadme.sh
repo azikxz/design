@@ -6,8 +6,19 @@ file=README.md
 rm -f "$file"
 
 # README header
-echo "# __PREVIEW OF IMAGES__" >> "$file"
-echo "stylix.base16Scheme = inputs.base16.paths.x86_64-linux.themeName;" >> "$file"
+echo '<div align="center">
+  <h1>【 __PREVIEW OF IMAGES__ 】</h1>
+</div>' >> "$file"
+
+echo '
+```nix
+  # -- flake.nix
+  { inputs.wallpapers.url =
+    "sourcehut:~neverness/design/wallpapers"; }
+  # -- other .nix file
+  { stylix.image = inputs.wallpapers.wallName; }
+```' >> "$file"
+
 echo "" >> "$file"
 
 # Loop through all images

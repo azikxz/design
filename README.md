@@ -1,5 +1,14 @@
-# __PREVIEW OF IMAGES__
-stylix.base16Scheme = inputs.base16.paths.x86_64-linux.themeName;
+<div align="center">
+  <h1>【 __PREVIEW OF IMAGES__ 】</h1>
+</div>
+
+```nix
+  # -- flake.nix
+  { inputs.wallpapers.url =
+    "sourcehut:~neverness/design/wallpapers"; }
+  # -- other .nix file
+  { stylix.image = inputs.wallpapers.wallName; }
+```
 
 ## angelStatue
 
